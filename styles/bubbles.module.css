@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("../Resources/Fonts/BubblegumSans-Regular.ttf");
+}
+.bubble {
+  position: relative;
+  height: 8.5rem;
+  width: 8.5rem;
+  border-radius: 50%;
+  box-shadow: 4px 3px /*rgb(123, 110, 207);*/ slateblue;
+  /*background-image: linear-gradient(
+    to bottom right,
+    palegoldenrod,
+    paleturquoise,
+    palevioletred
+  );*/
+  /*background-color: pa;*/
+  border-color: aqua; /*salmon;*/
+  border-style: groove;
+  animation: bubbleAnimation infinite alternate ease forwards;
+  font-family: "CustomFont";
+}
+.bubble:hover {
+  animation-play-state: paused;
+}
+
+.bubble::before {
+  float: right;
+  padding: 3rem;
+  font-size: 1.25rem;
+}
+.blur {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  height: 100vh;
+  width: 50%;
+}
+
+@keyframes bubbleAnimation {
+  20% {
+    transform: translateX(1000%) scale(1.5, 1.5);
+  }
+  40% {
+    transform: translateY(100%) scale(1, 1);
+  }
+  60% {
+    transform: translateX(1000%) scale(1.5, 1.5);
+  }
+  80% {
+    transform: translateY(100%) scale(1, 1);
+  }
+  100% {
+    transform: translateX(100%) scale(1.5, 1.5);
+  }
+}

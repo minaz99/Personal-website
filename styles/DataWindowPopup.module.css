@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("../Resources/Fonts/BubblegumSans-Regular.ttf");
+}
+
+.window .overlay {
+  width: 50%;
+  padding: 10px;
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+  /*z-index: 1;*/
+}
+.window .content {
+  font-family: "CustomFont";
+  border-radius: 5%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 500px;
+  /*z-index: index 2;*/
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  color: #000;
+  overflow-y: scroll;
+}
+.window .content::-webkit-scrollbar {
+  background-image: none;
+  width: 10px;
+  max-height: 50px;
+}
+
+.window .content::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(rgb(24, 11, 112), slateblue);
+  border-radius: 15px;
+}
+.window .content::-webkit-scrollbar-track {
+  border-radius: 25px;
+}
+
+.window .content li {
+  text-align: center;
+  list-style-position: inside;
+  text-transform: capitalize;
+}
+
+.window.active .overlay {
+  display: block;
+}
+
+.window .closebtn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
